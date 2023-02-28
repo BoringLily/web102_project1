@@ -8,12 +8,12 @@ const cardListJSON = JSON.parse(cardList);
 function App() {
   let cards = [];
   cardListJSON.forEach(element => {
-    cards.push(<Card image={element.image} title={element.title} description={element.description}/>)
+    cards.push(<Card image={element.image} title={element.title} date={element.date} location={element.location} link={element.link}/>)
   });
   return (
     <div className="App">
-      <h2> Hackathons for aspring engineers</h2>
-      <div id='card_container'>{cards} </div>
+      <div id='page_title'> Upcoming Hackathons Around the World</div>
+      <div id='card_container'>{cards}</div>
     </div>
   )
 }
